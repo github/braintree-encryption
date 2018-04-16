@@ -1,11 +1,14 @@
 {
-  "name": "braintree-encryption",
+  "name": "@github/braintree-encryption",
   "description": "Javascript Library for Client-side Encryption with Braintree",
   "version": "1.3.11",
   "main": "target/braintree-1.3.10.js",
   "repository": {
     "type": "git",
-    "url": "git@github.com:braintree/braintree-encryption.js"
+    "url": "git+https://github.com/github/braintree-encryption.git"
+  },
+  "publishConfig": {
+    "registry": "https://npm.registry.github.com"
   },
   "keywords": [
     "braintree",
