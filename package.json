@@ -2,7 +2,7 @@
   "name": "@github/braintree-encryption",
   "description": "Javascript Library for Client-side Encryption with Braintree",
   "version": "1.3.12",
-  "main": "target/braintree-1.3.10.js",
+  "main": "target/braintree-1.3.10.min.js",
   "repository": {
     "type": "git",
     "url": "git@github.com:github/braintree-encryption"
