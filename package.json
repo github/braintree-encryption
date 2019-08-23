@@ -8,7 +8,7 @@
     "url": "git+https://github.com/github/braintree-encryption.git"
   },
   "publishConfig": {
-    "registry": "https://npm.registry.github.com"
+    "registry": "https://npm.pkg.github.com"
   },
   "keywords": [
     "braintree",
