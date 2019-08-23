@@ -5,7 +5,10 @@
   "main": "target/braintree-1.3.10.js",
   "repository": {
     "type": "git",
-    "url": "git@github.com:github/braintree-encryption"
+    "url": "git+https://github.com/github/braintree-encryption.git"
+  },
+  "publishConfig": {
+    "registry": "https://npm.registry.github.com"
   },
   "keywords": [
     "braintree",
