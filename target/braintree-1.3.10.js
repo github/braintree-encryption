@@ -3734,7 +3734,7 @@ function isArray(value) {
 
 function generateUUID() { // RFC 4122 v4 (pseudo-random) UUID without hyphens
   return 'xxxxxxxxxxxx4xxxyxxxxxxxxxxxxxxx'.replace(/[xy]/g, function (xORy) {
-    var randomHex = Math.floor(Math.random() * 16);
+    var randomHex = crypto.getRandomValues(new Uint8Array(1))[0] % 16;
     var uuidHex = xORy === 'x' ? randomHex : randomHex & 0x3 | 0x8; // jshint ignore:line
     return uuidHex.toString(16);
   });
@@ -4786,7 +4786,7 @@ module.exports = {
 // RFC 4122 v4 (pseudo-random) UUID
 function generate() {
   return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function (c) {
-    var r = Math.random() * 16 | 0;
+    var r = crypto.getRandomValues(new Uint8Array(1))[0] % 16;
     var v = c === 'x' ? r : r & 0x3 | 0x8;
     return v.toString(16);
   });
@@ -6127,7 +6127,7 @@ module.exports = eventEnum;
 
   function _uuid() {
     return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function (c) {
-      var r = Math.random() * 16 | 0;
+      var r = crypto.getRandomValues(new Uint8Array(1))[0] % 16;
       var v = c === 'x' ? r : r & 0x3 | 0x8;
       return v.toString(16);
     });
@@ -10773,7 +10773,7 @@ function generateUid() {
   var uid = '';
 
   for (i = 0; i < 32; i++) {
-    r = Math.floor(Math.random() * 16);
+    r = crypto.getRandomValues(new Uint8Array(1))[0] % 16;
     uid += r.toString(16);
   }
 
