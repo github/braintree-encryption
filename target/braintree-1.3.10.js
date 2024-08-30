@@ -2366,13 +2366,11 @@ sjcl.random = {
       }
     }
 
-    const forbiddenKeys = ['__proto__', 'constructor', 'prototype'];
     for (i=0; i<jsTemp.length; i++) {
       j = jsTemp[i];
-      if (forbiddenKeys.includes(j)) {
-        continue;
+      if (!['__proto__', 'constructor', 'prototype'].includes(j)) {
+        delete cbs[j];
       }
-      delete cbs[j];
     }
   },
 
