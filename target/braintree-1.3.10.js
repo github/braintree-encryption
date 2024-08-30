@@ -2366,8 +2366,12 @@ sjcl.random = {
       }
     }
 
+    const forbiddenKeys = ['__proto__', 'constructor', 'prototype'];
     for (i=0; i<jsTemp.length; i++) {
       j = jsTemp[i];
+      if (forbiddenKeys.includes(j)) {
+        continue;
+      }
       delete cbs[j];
     }
   },
